@@ -1,0 +1,39 @@
+<div class="container">
+<h1>user registration</h1>
+<form #login="ngForm" (ngSubmit)="submit(login)">
+    <div class="form-groupe">
+   <label for="firstname">First name</label>
+   <input  #name ="ngModel"     required   minlength="2"   maxlength="7"    type="text" class="form-control" name="firstname" ngModel>
+   <div *ngIf="name.touched && name.invalid " class="alert alert-danger">
+    <p *ngIf="name.errors">FirstName required!!!</p>
+    <p *ngIf="name.errors">first name is short too :;::</p>
+    </div>
+    </div>
+    <pre></pre>
+    <div class="form-groupe">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" name="lastname"ngModel>
+     
+
+      
+         </div>
+<pre></pre>
+         <div class="form-groupe">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email"ngModel>
+         
+             </div>
+             <pre></pre>
+             <div class="form-groupe">
+                <label for="password">Password</label>
+                <input type="text" class="form-control" name="password"ngModel>
+             
+                 </div>
+                 <pre></pre>
+                
+
+                     <button type="submit" class="btn btn-dark">Submit</button>
+
+
+</form>
+</div>
